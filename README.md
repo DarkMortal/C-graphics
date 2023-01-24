@@ -10,3 +10,6 @@
 
 ### ScanLine Polygon filling Algorithm
 ![ScanLine](https://user-images.githubusercontent.com/67017303/209287730-436fd2ca-5b67-498e-a72f-dc8de0eb331e.png)
+
+### Polygon Triangulation using Ear Clipping Algorithm
+![Traingles](https://user-images.githubusercontent.com/67017303/214378766-1a33a334-a497-48d3-aea7-c02ec6629514.png)
