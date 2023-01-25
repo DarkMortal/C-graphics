@@ -36,8 +36,6 @@ std::vector<Point*> getPointArr(Point& p){
 
     while(p1->x != startX || p1->y != startY){
         points.push_back(p1);
-        //std::cout<<startX<<"  "<<startY<<std::endl;
-        //std::cout<<p1->x<<"  "<<p1->y<<std::endl<<std::endl;
         p1 = p1->next;
     }
     points.push_back(p1);
@@ -59,9 +57,10 @@ void triangulate(Point& p){
             _Float32 cross = v1.cross(v2);
             bool isValidEar = cross>0;
 
-            if(isValidEar){   // circle((*it)->x+xOffSet,(*it)->y+yOffSet,10);
-                v1.constMul(-1.0);  // v2 = a-c
-                v2.constMul(-1.0);  // v1 = a-b
+            if(isValidEar){   
+                // circle((*it)->x+xOffSet,(*it)->y+yOffSet,10);
+                v1.constMul(-1.0);  // v1 = a-b
+                v2.constMul(-1.0);  // v2 = a-c
                 Vectors v3 = Vectors((*it)->next->x - (*it)->prev->x , (*it)->next->y - (*it)->prev->y); // v3 = c-b
 
                 for(Point* p:points){
