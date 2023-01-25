@@ -6,7 +6,7 @@
 class Vectors{
     private: _Float32 x,y;
     public:
-        Vectors(_Float32 a,_Float32 b);
+        Vectors(_Float32,_Float32);
         ~Vectors();
         _Float32 dot(Vectors& v) const { return this->x*v.x + this->y*v.y; }
         _Float32 cross(Vectors& v) const { return this->x*v.y - this->y*v.x; }

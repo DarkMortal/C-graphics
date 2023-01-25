@@ -11,7 +11,7 @@ class Point{
     int16_t x,y;
     Point* next;
     Point* prev;
-    Point(int16_t&& a,int16_t&& b);
+    Point(int16_t&&,int16_t&&);
     ~Point();
     bool operator == (const Point& p) const noexcept { return (this->x == p.x && this->y == p.y); }
     Vectors operator - (const Point& p) const noexcept { return Vectors(this->x-p.x,this->y-p.y); }
